@@ -10,7 +10,7 @@ const Home: NextPage = () => {
     };
 
     const handleScroll = () => {
-      const menubar = document.querySelector('.menubar');
+      const menubar = document.querySelector('.menubar') as HTMLElement; // Indica ao TypeScript que é um HTMLElement
       if (menubar) {
         const isScrolled = window.scrollY > menubar.offsetTop;
         if (isScrolled) {
