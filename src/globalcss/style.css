@@ -1,318 +1,534 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+/* barra de rolagem */
+
+/* Barra de rolagem para Chrome e Safari */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #056da6; /* Cor do "ponteiro" da barra de rolagem */
+  border-radius: 10px; /* Borda arredondada do "ponteiro" */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #191919; /* Cor de fundo da barra de rolagem */
+}
+
+/* Barra de rolagem para Firefox */
+html {
+  scrollbar-color: #056da6 #191919;
+  background-color: #212228; /* Cor do "ponteiro" e cor de fundo da barra de rolagem, respectivamente */
+}
+
+body {
+  scrollbar-width: thin; /* Largura da barra de rolagem no Firefox */
+}
+
+/* seçoes */
+.section01 {
+  display: block !important;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 40px 60px 40px;
+  height: 800px;
+}
+
+.section01 h1 {
+  color: #15cdcb;
+  font-size: 40px;
+}
+
+.section01 h2 {
+  margin: 180px 0 0 0;
+  color: #fff;
+  animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+
+
+ @keyframes tracking-in-expand-fwd {
+  0% {
+    letter-spacing: -0.5em;
+    transform: translateZ(-700px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+.section01 p {
+  margin: 20px 0;
+  font-size: 20px;
+  color: #fff;
+  text-align: left !important;
+}
+
+.buttonContato {
+  margin: 20px 0;
+  padding: 10px 20px;
+  border: 0;
+  background-color: rgb(5, 107, 231);
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttonContato:hover {
+  background-color: rgb(4, 87, 184);
+}
+
+/* menubar */
+
+.menubar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  background-color: #212228; /* Adicionei uma cor de fundo para a barra de navegação */
+}
+
+.menubar img {
+  height: 40px; /* Ajuste a altura da imagem conforme necessário */
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+li {
+  margin-left: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #15cdcb;
+}
+
+/* sec sobremim */
+
+.sec-sobremim {
+  background-color: #212228;
+  color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 40px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sobremi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sobremimtxt {
+  flex: 1;
+  margin-right: 30px;
+}
+
+.sobremimtxt h2 {
+  color: #15cdcb;
+  font-size: 50px;
+  font-weight: 200;
+}
+
+.sobremimtxt p {
+  margin: 40px 40px 40px 0px;
+  font-size: 25px;
+  width: 800px;
+  width: 700px;
+  line-height: 40px;
+  text-align: left;
+  
+}
+
+.imgsobremim img {
+  width: 300px;
+  max-width: 300px;
+  border-radius: 20px 0 20px 0;
+  margin: 100px auto;
+  filter: drop-shadow(0 0 0 #15cdcb); 
+  transition: filter 0.3s ease;
+  cursor: pointer; 
+}
+
+
+
+
+
+
+
+.imgsobremim img:hover {
+  filter: drop-shadow(
+    0 0 10px #15cdcb
+  );
+}
+
+
+
+
+
+.servicos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 60px;
+    height: 800px;
+}
+
+.servicos-container {
+    display: flex;
+}
+
+.servicos-item {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 230px;
+    width: 300px;
+    margin: 10px;
+    background-color: #b2b2b236;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    
+}
+
+.servicos h2{
+    color: #15cdcb;
+    font-size: 50px;
+    font-weight: 200;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.servicos-item:hover {
+    transform: scale(1.1);
+    transform: scale(1.1) rotateZ(2deg);
+    border: 1px solid #15cdcb;
+}
+
+
+.servicos-item img {
+    width: 60px; /* Ajuste conforme necessário */
+    height: 60px; /* Ajuste conforme necessário */
+    margin-bottom: 10px;
+}
+
+.servicos-item h3 {
     color: #fff;
-    text-decoration: none;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  }
-  /* barra de rolagem */
-  
-  /* Barra de rolagem para Chrome e Safari */
-  ::-webkit-scrollbar {
-    width: 12px;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-color: #056da6; /* Cor do "ponteiro" da barra de rolagem */
-    border-radius: 10px; /* Borda arredondada do "ponteiro" */
-  }
-  
-  ::-webkit-scrollbar-track {
-    background-color: #191919; /* Cor de fundo da barra de rolagem */
-  }
-  
-  /* Barra de rolagem para Firefox */
-  html {
-    scrollbar-color: #056da6 #191919;
-    background-color: #212228; /* Cor do "ponteiro" e cor de fundo da barra de rolagem, respectivamente */
-  }
-  
-  body {
-    scrollbar-width: thin; /* Largura da barra de rolagem no Firefox */
-  }
-  
-  /* seçoes */
-  .section01 {
-    display: block !important;
+    margin-bottom: 10px;
+}
+
+.servicos-item p {
+    color: #ccc;
+}
+.portifolio {
+  background: url('../../public/img/bg.png') linear-gradient(1rem, #0a0909, #f8f8f8); ; 
+  background-repeat: no-repeat;
+  background-size: 100% 100%;  
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     max-width: 1200px;
-    margin: 0px auto;
-    padding: 40px 60px 40px;
+    margin: 0 auto;
+    padding: 40px 60px;
     height: 800px;
-  }
-  
-  .section01 h1 {
-    color: #15cdcb;
-    font-size: 40px;
-  }
-  
-  .section01 h2 {
-    margin: 180px 0 0 0;
-    color: #fff;
-    animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-  }
-  
-  
-  
-   @keyframes tracking-in-expand-fwd {
-    0% {
-      letter-spacing: -0.5em;
-      transform: translateZ(-700px);
-      opacity: 0;
-    }
-    40% {
-      opacity: 0.6;
-    }
-    100% {
-      transform: translateZ(0);
-      opacity: 1;
-    }
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  .section01 p {
-    margin: 20px 0;
-    font-size: 20px;
-    color: #fff;
-    text-align: left !important;
-  }
-  
-  .buttonContato {
-    margin: 20px 0;
-    padding: 10px 20px;
-    border: 0;
-    background-color: rgb(5, 107, 231);
-    border-radius: 20px;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .buttonContato:hover {
-    background-color: rgb(4, 87, 184);
-  }
-  
-  /* menubar */
-  
-  .menubar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 40px;
-    background-color: #212228; /* Adicionei uma cor de fundo para a barra de navegação */
-  }
-  
-  .menubar img {
-    height: 40px; /* Ajuste a altura da imagem conforme necessário */
-  }
-  
-  ul {
-    list-style: none;
-    display: flex;
-  }
-  
-  li {
-    margin-left: 20px;
-  }
-  
-  a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
-  
-  a:hover {
-    color: #15cdcb;
-  }
-  
-  /* sec sobremim */
-  
-  .sec-sobremim {
-    background-color: #212228;
-    color: #fff;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 40px;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .sobremi {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .sobremimtxt {
-    flex: 1;
-    margin-right: 30px;
-  }
-  
-  .sobremimtxt h2 {
+    
+}
+
+section div h2{
     color: #15cdcb;
     font-size: 50px;
     font-weight: 200;
-  }
-  
-  .sobremimtxt p {
-    margin: 40px 40px 40px 0px;
-    font-size: 25px;
-    width: 800px;
-    width: 700px;
-    line-height: 40px;
-    text-align: left;
-    
-  }
-  
-  .imgsobremim img {
+    text-align: center;
+    padding: 20px 0;
+    border: 10px #191919;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+
+}
+.portifolio-container{
+    display: flex;
+}
+.portifolio-item{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 230px;
     width: 300px;
-    max-width: 300px;
-    border-radius: 20px 0 20px 0;
-    margin: 100px auto;
-    filter: drop-shadow(0 0 0 #15cdcb); 
-    transition: filter 0.3s ease;
-    cursor: pointer; 
+    margin: 10px;
+    background-color: rgba(178, 178, 178, 0.21); /* Use rgba para incluir a opacidade na cor de fundo */
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.portifolio-item:hover {
+    transform: scale(1.05); 
+}
+
+.portifolio-item  img{
+   width: 280px;
+}
+
+@media screen and (max-width: 800px) {
+  .menubar ul {
+    display: none;
   }
-  
-  
-  
-  
-  
-  
-  
-  .imgsobremim img:hover {
-    filter: drop-shadow(
-      0 0 10px #15cdcb
-    );
+
+  .menubar .hamburguer-icon {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
   }
-  
-  
-  
-  
-  
-  .servicos {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 40px 60px;
-      height: 800px;
+
+  .menubar ul.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* Ajuste conforme necessário */
+    left: 0;
+    width: 100%;
+    background-color: #212228;
+    z-index: 1;
   }
-  
-  .servicos-container {
-      display: flex;
+
+  .menubar ul li {
+    margin: 10px;
   }
-  
-  .servicos-item {
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      height: 230px;
-      width: 300px;
-      margin: 10px;
-      background-color: #b2b2b236;
-      padding: 10px;
-      border-radius: 10px;
-      text-align: center;
-      transition: transform 0.3s ease;
-      
+  .section01 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px 40px;
+    box-shadow: 0px 10px 15px -3px rgba(3, 3, 3, 0.596);
   }
-  
-  .servicos h2{
-      color: #15cdcb;
-      font-size: 50px;
-      font-weight: 200;
-      text-align: center;
-      padding: 20px 0;
+
+  .section01 h1 {
+    font-size: 40px;
+    text-align: center;
   }
-  
-  .servicos-item:hover {
-      transform: scale(1.1);
-      transform: scale(1.1) rotateZ(2deg);
-      border: 1px solid #15cdcb;
+
+  .section01 p {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
   }
-  
-  
-  .servicos-item img {
-      width: 60px; /* Ajuste conforme necessário */
-      height: 60px; /* Ajuste conforme necessário */
-      margin-bottom: 10px;
+
+  .section01 .buttonContato {
+    display: flex;
+    padding: 10px 80px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
   }
-  
-  .servicos-item h3 {
-      color: #fff;
-      margin-bottom: 10px;
+
+  .section01 .buttonContato:hover {
+    background: linear-gradient(to right, #056fa8, #016894);
+    filter: drop-shadow(0px 10px 15px rgba(10, 136, 255, 0.966));
   }
-  
-  .servicos-item p {
-      color: #ccc;
+/* sobremim */
+.sec-sobremim {
+  flex-direction: column; 
+  text-align: center;
+}
+
+.sobremi {
+  flex-direction: column;
+}
+
+.sobremimtxt {
+  margin-left: 0;
+}
+
+.sobremimtxt p{
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  font-size: 20px;
+}
+.imgsobremim img {
+  margin-bottom: -auto;
+}
+
+/*  */
+
+
+.servicos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px 40px;
+  height: auto;
+}
+
+.servicos-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.servicos-item {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0;
+  background-color: #b2b2b236;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.servicos h2 {
+  font-size: 40px;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.servicos-item:hover {
+  transform: scale(1.05);
+  border: 1px solid #15cdcb;
+}
+
+.servicos-item img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.servicos-item h3 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.servicos-item p {
+  color: #ccc;
+  font-size: 16px;
+}
+/*  */
+
+.portifolio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px 40px;
+  height: auto;
+}
+
+.portifolio-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.portifolio-item {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0;
+  background-color: rgba(178, 178, 178, 0.21);
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.portifolio h2 {
+  font-size: 40px;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.portifolio-item:hover {
+  transform: scale(1.05);
+}
+
+.portifolio-item img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.portifolio-item h3 {
+  color: #15cdcb;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.portifolio-item p {
+  color: #ccc;
+  font-size: 16px;
+}
+
+
+
+}
+
+@media screen and (min-width: 769px) {
+  .menubar .hamburguer-icon {
+    display: none;
   }
-  .portifolio {
-    background: url('../../public/img/bg.png') linear-gradient(1rem, #0a0909, #f8f8f8);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;  
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 40px 60px;
-      height: 800px;
-      
-  }
-  
-  section div h2{
-      color: #15cdcb;
-      font-size: 50px;
-      font-weight: 200;
-      text-align: center;
-      padding: 20px 0;
-      border: 10px #191919;
-      border-radius: 10px;
-      backdrop-filter: blur(10px);
-  
-  }
-  .portifolio-container{
-      display: flex;
-  }
-  .portifolio-item{
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      height: 230px;
-      width: 300px;
-      margin: 10px;
-      background-color: rgba(178, 178, 178, 0.21); /* Use rgba para incluir a opacidade na cor de fundo */
-      padding: 10px;
-      border-radius: 10px;
-      text-align: center;
-      transition: transform 0.3s ease;
-  }
-  
-  .portifolio-item:hover {
-      transform: scale(1.05); 
-  }
-  
-  .portifolio-item  img{
-     width: 280px;
-  }
+}
