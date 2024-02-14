@@ -1,0 +1,10 @@
+{
+    "discord.detailsDebugging": "🧹 | Debugging {file_name}",
+    "discord.detailsEditing": "🗃️| Editing {file_name}",
+    "discord.detailsIdling": "💤 | Idling",
+    "discord.largeImageIdling": "💤 | Idling",
+    "discord.lowerDetailsIdling": "💤 | Idling",
+    "discord.lowerDetailsDebugging": "🧹 | Debugging: {workspace}",
+    "discord.lowerDetailsEditing": "🗃️ Workspace: {workspace}",
+    "discord.lowerDetailsNoWorkspaceFound": "No workspace 🗃️"
+}
